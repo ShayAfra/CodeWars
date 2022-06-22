@@ -17,3 +17,11 @@ function getCount(str) {
     }
         return count
 }
+
+
+
+//best/simplest solution
+
+// function getCount(str) {
+//     return (str.match(/[aeiou]/ig)||[]).length;
+//   }
