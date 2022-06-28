@@ -16,35 +16,46 @@
 //solution
 
 function highAndLow(numbers){
-    let highest = 0
-    let lowest = 100
-    let numString = ''
-    let tempNum = ''
-    for (let i = 0; i < numbers.length; i++){
-      if(numbers[i] != ' '){
-        if(numbers[i] == '-'){
-                  if ((Number(numbers[i+1])* -1) < lowest){
-          lowest = (numbers[i+1] * -1)
-                  }
-        }
-         if(numbers[i+1] != ' '){
-          tempNum = `${numbers[i]}${numbers[i+1]}`
-          
-        } else {
-          tempNum = `${numbers[i]}`
-        }
-          if(Number(tempNum) < lowest){
-            lowest = Number(tempNum)
-          }
-          if (Number(tempNum) > highest){
-            highest = Number(tempNum)
-          }
-         }
-        }
+  let highest = 0
+  let lowest = 100
+  let numString = ''
+  let tempNum = ''
+  for (let i = 0; i < numbers.length; i++){
+    if(numbers[i] != ' '){
+      if(numbers[i] == '-'){
+                if ((Number(numbers[i+1])* -1) < lowest){
+        lowest = (numbers[i+1] * -1)
+                }
       }
-    numString = `${highest} ${lowest}`
-    return numString
-    }
-  
+       if(!isNaN(numbers[i+1])){
+        tempNum = `${numbers[i]}${numbers[i+1]}`
         
+      } else {
+        tempNum = `${numbers[i]}`
+      }
+        if(Number(tempNum) < lowest){
+          lowest = Number(tempNum)
+        }
+        if (Number(tempNum) > highest){
+          highest = Number(tempNum)
+        }
+       }
+      
+    }
+  numString = `${highest} ${lowest}`
+  return numString
+  }
+
+   
+  // best/shortest solutions
+
+  // function highAndLow(numbers){
+  //   numbers = numbers.split(' ').map(Number);
+  //   return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+  // }
+
+  // function highAndLow(numbers){
+  //   numbers = numbers.split(' ');
+  //   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+  // }
      
