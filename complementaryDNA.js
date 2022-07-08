@@ -48,3 +48,6 @@ function DNAStrand(dna){
 // function DNAStrand(dna){
 //   return dna.split('').map(function(v){ return pairs[v] }).join('');
 // }
+
+//let pairs = {A:'T',T:'A',C:'G',G:'C'};
+// const DNAStrand = dna => dna.replace(/./g, c => pairs[c]);
