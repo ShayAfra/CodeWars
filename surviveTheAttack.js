@@ -32,7 +32,7 @@ function hasSurvived(attackers, defenders){
     for(let i = 0; i < length; i++){
       if(attackers[i] > defenders[i] || defenders[i] == undefined){
         attCount++
-      }else{
+      }else if(defenders[i] > attackers[i] || attackers[i] == undefined){
         defCount++
       }
     }
