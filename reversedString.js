@@ -7,4 +7,4 @@ function solution(str){
     let reversed = split.reverse()
     let joined = reversed.join('')
     return joined
-  }
+  }     
